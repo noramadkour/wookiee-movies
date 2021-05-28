@@ -10,27 +10,32 @@ export class MoviesService {
 
   token = 'Wookie2019';
   endPoint = 'https://wookie.codesubmit.io/movies';
-  currentMovie : any ;
+  currentMovie: any;
 
   constructor(private http: HttpClient) {
 
   }
 
 
-
-  getMovies() : Observable<any>{
+  /**
+   * to get all movies
+   * @returns 
+   */
+  getMovies(): Observable<any> {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
     return this.http.get(this.endPoint, { headers: headers }).pipe(tap((res => {
-      // this.movies = res;
-      // console.log('list movies is ', this.movies);
     })));
   }
 
-  getMoviesBySearch(value) : Observable<any>{
+  /**
+   * to get movies by search criteria 
+   * @param value 
+   * @returns 
+   */
+  getMoviesBySearch(value): Observable<any> {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${this.token}`);
-    return this.http.get(`${this.endPoint+ '?q=' + value}` , { headers: headers }).pipe(tap((res => {
-      // this.movies = res;
-      // console.log('list movies is ', this.movies);
+    return this.http.get(`${this.endPoint + '?q=' + value}`, { headers: headers })
+    .pipe(tap((res => {
     })));
   }
 
