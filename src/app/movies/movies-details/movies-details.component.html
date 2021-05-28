@@ -1,0 +1,41 @@
+
+ <div class="page-header">
+  <mat-toolbar >
+    <div class="row fw">
+      <mat-icon  class="title-icon" routerLink="/"> arrow_back</mat-icon>
+        </div>
+        
+    </mat-toolbar>
+  </div>
+
+
+<mat-grid-list cols="3" rowHeight="1:1">
+    <mat-grid-tile>
+        <img mat-card-image [src]="currentMovie?.poster"  style="margin: 70px; margin-top: 160px;"
+        alt="Photo of a Shiba Inu">
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <div>
+      <p> <span style="font-weight: bold;"> Title : </span> {{currentMovie?.title}}</p> 
+      
+      <p> {{currentMovie?.released_on | date:'y'}} &nbsp; |&nbsp; {{currentMovie?.length}} &nbsp; | &nbsp; {{currentMovie?.director}}</p>  
+
+      <p> <span style="font-weight: bold;"> Cast : </span> {{currentMovie?.cast}}</p>  
+     
+      <p> <span style="font-weight: bold;"> Move Description : </span> {{currentMovie?.overview}}</p>    
+
+        </div>
+
+    </mat-grid-tile>
+    
+    <mat-grid-tile>
+        <button mat-icon-button color="accent" *ngFor="let ratingId of ratingArr;index as i" [id]="'star_'+i" 
+         [matTooltip]="ratingId+1" matTooltipPosition="above">
+            <mat-icon>
+              {{showIcon(i)}}
+            </mat-icon>
+          </button>
+    </mat-grid-tile>
+
+  </mat-grid-list>

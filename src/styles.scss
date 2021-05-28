@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+.page-header {
+
+    .mat-toolbar-row,
+    .mat-toolbar-single-row {
+      height: 50px !important;
+      padding: 1px 0 0 0 !important;
+  
+      .fw {
+        width: 100%;
+        align-self: flex-start !important;
+        padding: 6px;
+        justify-content: center;
+      }
+  
+      .title {
+        position: relative;
+  
+        .title-icon {
+          cursor: pointer;
+          position: absolute;
+          top: 3px;
+        }
+  
+        @media (min-width: 300px) and (max-width: 750px) {
+          position: relative;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 170px;
+          white-space: nowrap;
+        }
+      }
+  
+      .search {
+        background-color: #fff;
+        border-radius: 26px;
+        position: relative;
+        max-width: 400px;
+        margin: 0 auto;
+        width: 400px;
+        padding: 3px 6px 3px 6px;
+  
+        input {
+          border: 0;
+          width: 90%;
+          display: flex;
+          margin: 0 auto;
+          text-align: center;
+          line-height: 30px;
+        }
+  
+        .mat-icon {
+          color: #989898;
+          position: absolute;
+          left: 8px;
+          top: 10px;
+        }
+  
+        .rtl-mat-icon {
+          left: 8px;
+          cursor: pointer;
+        }
+  
+        .ltr-mat-icon {
+          right: 8px;
+          left: auto;
+          cursor: pointer;
+        }
+      }
+    }
+  }

@@ -1,0 +1,126 @@
+.cardContainer {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  mat-card {
+    height: auto;
+    width: 250px;
+    display: inline-block;
+    margin: 20px;
+    padding: 0 !important;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  mat-card:hover .material-icons {
+    transform: rotate(360deg) scale(1.2);
+    transition: .5s ease-in-out;
+  }
+  
+  mat-card:hover {
+    transform: scale(1.06);
+    box-shadow: 1px 3px 5px 2px rgba(0, 0, 0, .3);
+  }
+  
+  mat-card .material-icons {
+    text-align: center;
+    display: block;
+    margin: 20px;
+    font-size: 100px;
+  }
+  
+  mat-card:nth-child(1) mat-card-header {
+    background-color: #4caf50;
+  }
+  
+  mat-card:nth-child(2) mat-card-header {
+    background-color: #2196f3;
+  }
+  
+  mat-card:nth-child(3) mat-card-header {
+    background-color: #ff8f00;
+  }
+  
+  mat-card:nth-child(4) mat-card-header {
+    background-color: #607d8b;
+  }
+  
+  mat-card:nth-child(5) mat-card-header {
+    background-color: #b13ae8;
+  }
+  
+  mat-card:nth-child(6) mat-card-header {
+    background-color: #f0659b;
+  }
+  
+  mat-card:nth-child(7) mat-card-header {
+    background-color: #ccf733;
+  }
+  mat-card:nth-child(8) mat-card-header {
+    background-color: #4caf50;
+  }
+  
+  mat-card:nth-child(9) mat-card-header {
+    background-color: #2196f3;
+  }
+  
+  mat-card:nth-child(10) mat-card-header {
+    background-color: #ff8f00;
+  }
+  
+  mat-card:nth-child(11) mat-card-header {
+    background-color: #607d8b;
+  }
+  
+  mat-card:nth-child(12) mat-card-header {
+    background-color: #b13ae8;
+  }
+  
+  mat-card:nth-child(13) mat-card-header {
+    background-color: #f0659b;
+  }
+  
+  mat-card:nth-child(14) mat-card-header {
+    background-color: #ccf733;
+  }
+  mat-card:nth-child(15) mat-card-header {
+    background-color: #4caf50;
+  }
+  
+  mat-card:nth-child(16) mat-card-header {
+    background-color: #2196f3;
+  }
+  
+  mat-card:nth-child(17) mat-card-header {
+    background-color: #ff8f00;
+  }
+  
+  mat-card:nth-child(18) mat-card-header {
+    background-color: #607d8b;
+  }
+  
+  mat-card:nth-child(19) mat-card-header {
+    background-color: #b13ae8;
+  }
+  
+  mat-card:nth-child(20) mat-card-header {
+    background-color: #f0659b;
+  }
+  
+  mat-card:nth-child(21) mat-card-header {
+    background-color: #ccf733;
+  }
+  mat-card-title {
+    padding: 10px 10px 0 0;
+  }
+  
+  mat-card-content p {
+    text-align: center;
+    padding-top: 20px;
+    padding: 10px;
+  }
+  

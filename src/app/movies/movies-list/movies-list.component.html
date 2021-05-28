@@ -1,0 +1,51 @@
+
+ <div class="page-header">
+    <mat-toolbar >
+      <div class="row fw">
+          <!-- <h2 class="title">
+              <mat-icon class="title-icon">ballot</mat-icon>
+              <span
+                [class.ltr-title-text]="currentLang == 'en'"
+                >pageTitle </span
+              >
+            </h2> -->
+       
+            <div class="search">
+              <mat-icon
+                [class.ltr-mat-icon]="currentLang == 'en'"
+                >search</mat-icon
+              >
+              <input
+              #search (keyup)="filterData()"
+                [class.naskh]="currentLang === 'ar'"
+                placeholder="Search by movie title"
+                [(ngModel)]="searchInputValue"
+              />
+            </div>
+            
+          </div>
+          
+      </mat-toolbar>
+    </div>
+
+
+<div class="cardContainer">
+    <mat-card *ngFor="let movie of movies" (click)="navigateToDetails(movie)">
+        <mat-card-header>
+            <mat-card-title>
+                {{movie.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <!-- <span class="material-icons">
+      perm_contact_calendar
+    </span> -->
+    <img mat-card-image [src]="movie.backdrop" alt="Photo of a Shiba Inu">
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <p>
+                {{movie.overview}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+</div>
